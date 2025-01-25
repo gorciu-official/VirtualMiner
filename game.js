@@ -223,6 +223,7 @@ function buy(item) {
         pickaxe.maxDurability += Infinity;
         pickaxe.durability = Infinity;
         document.querySelector(`div[data-item="${item}"]`).remove();
+        document.querySelector(`div[data-item="more-durability"]`).remove();
     }
 
     document.querySelector(`div[data-item="${item}"] .cost`).innerHTML = cost * 2;
@@ -351,6 +352,7 @@ function loadGame() {
         if (item.dataset.item === "infinity-durability") {
             if (pickaxe.maxDurability == Infinity) {
                 item.remove();
+                document.querySelector(`div[data-item="more-durability"]`).remove();
             }
         }
     });
