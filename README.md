@@ -1,6 +1,4 @@
-<div align="center" style="width:64px;">
-
-![Ore Image](https://raw.githubusercontent.com/gorciu-official/studio-online-content/refs/heads/main/ore.jpeg)
+<div align="center">
 
 # [Virtual Miner](https://vm.wuaze.com/)
 
