@@ -68,7 +68,7 @@ section {
 section .item {
     margin-top: 50px;
     width: 100%;
-    min-height: 100px;
+    min-height: 130px;
     background-color: var(--ore);
     display: flex;
     flex-direction: column;
