@@ -9,74 +9,74 @@
 </head>
 <body>
     <aside>
-<h1>Virtual Miner</h1>
-<p id="counter">Loading</p>
-<p id="status">Ready</p>
-<br><br>
-<div class="ore" onclick="mine()"></div>
-<br><br>
-<p class="stats">Loading</p>
-<br>
-<button onclick="sell()">Sell all ores</button>
+        <h1>Virtual Miner</h1>
+        <p id="counter">Loading</p>
+        <p id="status">Ready</p>
+        <br><br>
+        <div class="ore" onclick="mine()"></div>
+        <br><br>
+        <p class="stats">Loading</p>
+        <br>
+        <button onclick="sell()">Sell all ores</button>
     </aside>
     <main>
-<div class="hidden tradecenter">
-    <h1>Trade Center</h1>
-    <p>Evaluate offers and exchange your ores wisely. Some deals are better than others!<br><b>Warning:</b> the offers are regenerated every 60 seconds.</p>
-    <div id="offers1"></div>
-    <div id="offers2"></div>
-    <div id="offers3"></div>
-    <br><br>
-</div>
-<h1>Other jobs</h1>
-<br>
-<p><b>Placeholders</b>, there are planned to add.</p>
-<br>
-<div class="row">
-    <div>
-        <h2>Baker</h2>
-        <p>Bake your own delicious products, such as: croissants, bread and cookies to earn more money!</p>
-    </div>
-    <div>
-        <h2>Farmer</h2>
-        <p>Farm your natural, not chemical plants and sell them to people to earn even more money!</p>
-    </div>
-</div>
-<br><br>
-<p>&copy; Gorciu; Virtual Miner in version 1.2.0 (released on 24.01.2025)</p>
+        <div class="hidden tradecenter">
+            <h1>Trade Center</h1>
+            <p>Evaluate offers and exchange your ores wisely. Some deals are better than others!<br><b>Warning:</b> the offers are regenerated every 60 seconds.</p>
+            <div id="offers1"></div>
+            <div id="offers2"></div>
+            <div id="offers3"></div>
+            <br><br>
+        </div>
+        <h1>Other jobs</h1>
+        <br>
+        <p><b>Placeholders</b>, there are planned to add.</p>
+        <br>
+        <div class="row">
+            <div>
+                <h2>Baker</h2>
+                <p>Bake your own delicious products, such as: croissants, bread and cookies to earn more money!</p>
+            </div>
+            <div>
+                <h2>Farmer</h2>
+                <p>Farm your natural, not chemical plants and sell them to people to earn even more money!</p>
+            </div>
+        </div>
+        <br><br>
+        <p>&copy; Gorciu; Virtual Miner in version 1.2.0 (released on 24.01.2025)</p>
     </main>
     <section>
-<h1>Shop</h1>
-<br>
-<p>Everytime you get something from this shop, it price doubles. You need to gain more and more money for the same item. Some items are not displayed, and will be unlocked during the game.</p>
-<div class="item" data-item="buy-mini-cursor">
-    <h2>Mini Cursor - <span class="cost">1</span> PLN</h2>
-    <p>Gives you an possibility to automatically gain 0.1 PLN per second.</p>
-</div>
-<div class="item" data-item="buy-cursor">
-    <h2>Cursor - <span class="cost">20</span> PLN</h2>
-    <p>Gives you an possibility to automatically gain one click per second, without need to wait to complete previous manual mining.</p>
-</div>
-<div class="item" data-item="renew-pickaxe">
-    <h2>Renew pickaxe - <span class="cost">500</span> PLN</h2>
-    <p>Sets the durability of your pickaxe to the ten percent of the max durability, of course may be really too common choice when you have too many auto-clicker upgrades.</p>
-</div>
-<div class="item" data-item="upgrade-pickaxe">
-    <h2>Upgrade to Iron - <span class="cost">600</span> PLN</h2>
-    <p>Upgrades your current ore to a next one. This upgrade basically gives you a chance to gain more money from one click.</p>
-</div>
-<div class="item" data-item="upgrade-pickaxe-speed">
-    <h2>Upgrade speed - <span class="cost">1800</span> PLN</h2>
-    <p>Upgrades your current pickaxe to be faster when you are manual mining by 0.05 seconds.</p>
-</div>
-<div class="item" data-item="buy-better-ore">
-    <h2>Better stone - <span class="cost">2048</span> PLN</h2>
-    <p>Better stone gives you more ores inside, so you actually mine faster and more at once.</p>
-</div>
-<div class="item hidden" data-item="more-durability">
-    <h2>Increase durability - <span class="cost">3000</span> PLN</h2>
-    <p>Buys more maximal durability (10 percent of actual max durability) and sets the durability to the max</p>
-</div>
+        <h1>Shop</h1>
+        <br>
+        <p>Everytime you get something from this shop, it price doubles. You need to gain more and more money for the same item. Some items are not displayed, and will be unlocked during the game.</p>
+        <div class="item" data-item="buy-mini-cursor">
+            <h2>Mini Cursor - <span class="cost">1</span> PLN</h2>
+            <p>Gives you an possibility to automatically gain 0.1 PLN per second.</p>
+        </div>
+        <div class="item" data-item="buy-cursor">
+            <h2>Cursor - <span class="cost">20</span> PLN</h2>
+            <p>Gives you an possibility to automatically gain one click per second, without need to wait to complete previous manual mining.</p>
+        </div>
+        <div class="item" data-item="renew-pickaxe">
+            <h2>Renew pickaxe - <span class="cost">500</span> PLN</h2>
+            <p>Sets the durability of your pickaxe to the ten percent of the max durability, of course may be really too common choice when you have too many auto-clicker upgrades.</p>
+        </div>
+        <div class="item" data-item="upgrade-pickaxe">
+            <h2>Upgrade to Iron - <span class="cost">600</span> PLN</h2>
+            <p>Upgrades your current ore to a next one. This upgrade basically gives you a chance to gain more money from one click.</p>
+        </div>
+        <div class="item" data-item="upgrade-pickaxe-speed">
+            <h2>Upgrade speed - <span class="cost">1800</span> PLN</h2>
+            <p>Upgrades your current pickaxe to be faster when you are manual mining by 0.05 seconds.</p>
+        </div>
+        <div class="item" data-item="buy-better-ore">
+            <h2>Better stone - <span class="cost">2048</span> PLN</h2>
+            <p>Better stone gives you more ores inside, so you actually mine faster and more at once.</p>
+        </div>
+        <div class="item hidden" data-item="more-durability">
+            <h2>Increase durability - <span class="cost">3000</span> PLN</h2>
+            <p>Buys more maximal durability (10 percent of actual max durability) and sets the durability to the max</p>
+        </div>
     </section>
 </body>
 </html>
