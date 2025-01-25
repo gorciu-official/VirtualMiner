@@ -1,0 +1,141 @@
+:root {
+    --background-stage1: #0d2f46;
+    --background-stage2: #0c4614;
+    --ore: #333131;
+    --ore-second: #585252;
+    --accent: #0000009c;
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    color: white;
+    font-family: Arial, sans-serif;
+    word-wrap: break-word;
+}
+
+body {
+    background-color: var(--background-stage1);
+    display: grid;
+    grid-template-columns: 1fr 2fr 1fr;
+    height: 100vh;
+}
+
+aside, section, main {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    overflow-y: auto;
+    padding: 20px;
+}
+
+main .tradecenter {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+aside {
+    background-color: var(--accent);
+    height: 100%;
+}
+
+section {
+    background-color: var(--accent);
+    height: 100%;
+}
+
+#offers1, #offers2, #offers3 {
+    display: flex;
+    gap: 10px;
+    flex-direction: row;
+    justify-content: space-between;
+}
+
+.offer {
+    background-color: var(--ore-second);
+    padding: 15px;
+    margin: 10px;
+    border-radius: 10px;
+    text-align: center;
+}
+
+.offer button {
+    margin: 5px;
+}
+
+section .item {
+    margin-top: 50px;
+    width: 100%;
+    min-height: 100px;
+    background-color: var(--ore);
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+aside p:not(.stats), section p, section h2, main p, main h2 {
+    text-align: center;
+}
+
+.ore {
+    transition: 0.25s;
+    width: 100px;
+    height: 100px;
+    background: url(https://raw.githubusercontent.com/gorciu-official/studio-online-content/refs/heads/main/ore.jpeg);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    rotate: 45deg;
+}
+
+.ore:hover {
+    transition: 0.25s;
+    rotate: initial;
+    cursor: pointer;
+}
+
+h1 {
+    font-size: 38px;
+}
+
+h2 {
+    font-size: 28px;
+}
+
+button {
+    padding: 10px;
+    background-color: var(--ore);
+    border: none;
+    border-radius: 10px;
+    color: white;
+    font-size: 16px;
+    cursor: pointer;
+}
+
+::-webkit-scrollbar {
+    background-color: white;
+    width: 1px;
+}
+
+::-webkit-scrollbar-thumb {
+    background-color: var(--ore);
+}
+
+.row {
+    display: flex;
+    gap: 10px;
+}
+
+.row div {
+    max-width: 350px;
+    background-color: var(--ore-second);
+    padding: 15px;
+    border-radius: 10px;
+}
+
+.hidden {
+    display: none !important;
+}
