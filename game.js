@@ -321,7 +321,11 @@ function introducting() {
 }
 
 function loadGame() {
-    document.addEventListener("mouseover", saveGame);
+    document.addEventListener("mouseleave", () => {
+        console.clear();
+        console.log(`Why are you cheating? I know you are cheating. This is not pre-defined message. It is now ${new Date().toLocaleTimeString()}.`);
+        saveGame();
+    });
     setInterval(saveGame, 20 * 1000);
 
     var json = JSON.parse(window.localStorage.getItem("vm_savedata"));
