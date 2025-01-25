@@ -83,6 +83,8 @@ function updateData() {
     if (pickaxe.durability < 100 && temp1) {
         alert("Emergency situation! Your pickaxe is about to break! Don't worry! Buy a new item, now available - the more maximum durability in the shop (this will completelly renew the pickaxe, but you will be still able to mine existing ores)!");
         document.querySelector(`div[data-item="more-durability"]`).classList.remove("hidden");
+        alert("Pro-tip! You can now buy infinity durability of your pickaxe! Also unlocked in the shop, just scroll.");
+        document.querySelector(`div[data-item="infinity-durability"]`).classList.remove("hidden");
         temp1 = false;
     }
 }
@@ -217,6 +219,10 @@ function buy(item) {
     } else if (item === "more-durability") {
         pickaxe.maxDurability += pickaxe.maxDurability / 5;
         pickaxe.durability = pickaxe.maxDurability;
+    } else if (item === "infinity-durability") {
+        pickaxe.maxDurability += Infinity;
+        pickaxe.durability = Infinity;
+        document.querySelector(`div[data-item="${item}"]`).remove();
     }
 
     document.querySelector(`div[data-item="${item}"] .cost`).innerHTML = cost * 2;
@@ -338,7 +344,13 @@ function loadGame() {
 
         if (item.dataset.item === "upgrade-pickaxe-speed") {
             if (pickaxe.speedInSeconds <= 0.2) {
-                document.querySelector(`div[data-item="upgrade-pickaxe-speed"]`).remove();
+                item.remove();
+            }
+        }
+
+        if (item.dataset.item === "infinity-durability") {
+            if (pickaxe.maxDurability == Infinity) {
+                item.remove();
             }
         }
     });
