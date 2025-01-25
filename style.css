@@ -81,6 +81,7 @@ aside p:not(.stats), section p, section h2, main p, main h2 {
 }
 
 .ore {
+    position: relative;
     transition: 0.25s;
     width: 100px;
     height: 100px;

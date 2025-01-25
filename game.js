@@ -38,6 +38,13 @@ function goldenOresHandler() {
 }
 
 function updateData() {
+    if (pickaxe.durability == null) {
+        pickaxe.durability = Infinity;
+    }
+    if (pickaxe.maxDurability == null) {
+        pickaxe.maxDurability = Infinity;
+    }
+
     var statsString = "<b>Stone:</b> " + minedStone + "<br>";
     if (pickaxe.canMineIron) {
         statsString += "<b>Iron:</b> " + minedIron + "<br>";
@@ -113,6 +120,25 @@ function sell() {
 }
 
 function mine(skipMiningCheck = false) {
+    const oreAnimation = document.createElement("span");
+    oreAnimation.innerText = "+1";
+    oreAnimation.style.position = "absolute";
+    oreAnimation.style.top = Math.random() * 100 + "%";
+    oreAnimation.style.left = Math.random() * 100 + "%";
+    oreAnimation.style.rotate = "-45deg";
+    oreAnimation.style.opacity = "0.7";
+    oreAnimation.style.backgroundColor = "var(--accent)";
+    oreAnimation.style.borderRadius = "50%";
+    oreAnimation.style.padding = "5px";
+    document.querySelector('.ore').appendChild(oreAnimation);
+
+    setTimeout(() => {
+        oreAnimation.style.opacity = "1";
+        setTimeout(() => {
+            oreAnimation.remove();
+        }, 400);
+    }, 600);
+
     if (pickaxe.durability <= 0) {
         document.querySelector("#status").innerHTML = "Pickaxe is broken! Buy a new one in the right panel.";
         return;
@@ -245,9 +271,9 @@ function generateOffers() {
             const offer = document.createElement("div");
             offer.className = "offer";
 
-            const giveType = ["Stone", "Iron", "Copper", "Gold", "Diamonds"][Math.floor(Math.random() * 4)];
+            const giveType = ["Stone", "Iron", "Copper", "Gold", "Diamonds"][Math.floor(Math.random() * 5)];
             const giveAmount = Math.floor(Math.random() * 50) + 1;
-            const takeType = ["Stone", "Iron", "Copper", "Gold", "Diamonds"][Math.floor(Math.random() * 4)];
+            const takeType = ["Stone", "Iron", "Copper", "Gold", "Diamonds"][Math.floor(Math.random() * 5)];
             const takeAmount = Math.floor(Math.random() * 50) + 1;
 
             offer.innerHTML = `
@@ -311,6 +337,10 @@ function loadGame() {
     pickaxe = json.pickaxe;
     clickers1 = json.clickers1;
     clickers2 = json.clickers2;
+
+    if (pickaxe.durability == null) {
+        pickaxe.durability = Infinity;
+    }
     
     if (pickaxe.canMineDiamonds) {
         document.body.style.backgroundColor = "var(--background-stage2)";
